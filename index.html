@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Coffee Date?</title>
+<style>
+body{font-family:Arial;text-align:center;background:#ffe6ea;padding:40px}
+button{padding:10px 20px;font-size:18px;margin:10px;border:none;border-radius:10px;background:#ff4d6d;color:white}
+#no{position:relative}
+</style>
+</head>
+
+<body>
+
+<h2>Hey 👀</h2>
+<p>Like the photo to unlock something...</p>
+
+<img src="https://picsum.photos/250" width="250"><br><br>
+
+<button onclick="showPuzzle()">❤️ Like</button>
+
+<div id="puzzle" style="display:none;">
+<h3>Puzzle Time</h3>
+<p>What is 7 + 5 × 2 ?</p>
+<input id="ans">
+<button onclick="check()">Submit</button>
+</div>
+
+<div id="question" style="display:none;">
+<h2>Will you go on a coffee date with me? ☕</h2>
+<button onclick="yes()">Yes ❤️</button>
+<button id="no" onmouseover="run()">No 😅</button>
+</div>
+
+<div id="form" style="display:none;">
+<h3>Few Questions 😄</h3>
+<input placeholder="Favourite coffee"><br><br>
+<input placeholder="When are you free?"><br><br>
+<button>Submit</button>
+</div>
+
+<script>
+
+function showPuzzle(){
+document.getElementById("puzzle").style.display="block"
+}
+
+function check(){
+let a=document.getElementById("ans").value
+if(a=="17"){
+document.getElementById("question").style.display="block"
+}else{
+alert("Try again 😜")
+}
+}
+
+function run(){
+let b=document.getElementById("no")
+b.style.position="absolute"
+b.style.left=Math.random()*300+"px"
+b.style.top=Math.random()*300+"px"
+}
+
+function yes(){
+document.getElementById("form").style.display="block"
+}
+
+</script>
+
+</body>
+</html>
